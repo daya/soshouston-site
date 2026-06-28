@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Living from Our Soul — Science of Spirituality, Houston</title>
+<meta name="description" content="A free 12-part meditation workshop series in South Houston. Begins Saturday, July 11, 2026 at Carmel Temple. All are welcome.">
+<meta property="og:title" content="Living from Our Soul — A 12-Part Meditation Journey">
+<meta property="og:description" content="Free meditation workshop & lunch. Begins July 11, 2026 · Carmel Temple, South Houston. All are welcome.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#123a48;          /* deep teal ink */
+    --ink-soft:#2c5560;
+    --mist:#6f97a0;
+    --gold:#d8a13a;         /* sunrise gold */
+    --coral:#e0764e;        /* warm coral accent */
+    --cream:#f4faf8;
+    --sky-top:#cfe3dd;
+    --sky-low:#a9cdc9;
+    --water:#3d7079;
+    --water-deep:#1f4a52;
+    --line:rgba(18,58,72,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Outfit",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;
+    padding:80px 24px 64px;
+    overflow:hidden;
+    background:
+      radial-gradient(120% 80% at 50% 18%, rgba(255,244,214,.95) 0%, rgba(255,238,196,.35) 26%, rgba(0,0,0,0) 52%),
+      linear-gradient(180deg, var(--sky-top) 0%, var(--sky-low) 42%, var(--water) 70%, var(--water-deep) 100%);
+  }
+  /* distant hills */
+  .hero::before{
+    content:"";position:absolute;left:0;right:0;top:38%;height:22%;
+    background:
+      radial-gradient(60% 100% at 20% 100%, rgba(60,98,110,.55), transparent 70%),
+      radial-gradient(70% 100% at 55% 100%, rgba(40,78,92,.5), transparent 72%),
+      radial-gradient(60% 100% at 88% 100%, rgba(60,98,110,.5), transparent 70%);
+    filter:blur(6px);
+  }
+  /* reeds */
+  .reed{position:absolute;bottom:0;width:3px;background:rgba(20,48,60,.6);border-radius:3px;transform-origin:bottom}
+  .lotus{
+    position:relative;z-index:2;
+    width:120px;height:120px;margin:0 auto 26px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .lotus svg{width:100%;height:100%;filter:drop-shadow(0 6px 22px rgba(255,236,170,.6))}
+  .eyebrow{
+    position:relative;z-index:2;
+    font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:600;margin-bottom:14px;
+  }
+  .title{
+    position:relative;z-index:2;
+    font-family:"Cormorant Garamond",serif;
+    font-style:italic;font-weight:600;
+    font-size:clamp(2.6rem,7vw,4.4rem);
+    line-height:1.02;color:var(--ink);
+    letter-spacing:.5px;
+  }
+  .subtitle{
+    position:relative;z-index:2;
+    margin-top:16px;max-width:30ch;
+    font-size:clamp(1.05rem,2.4vw,1.3rem);
+    color:var(--ink-soft);font-weight:400;
+  }
+  .free-badge{
+    position:relative;z-index:2;margin-top:26px;
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--coral);color:#fff;
+    padding:9px 20px;border-radius:999px;
+    font-weight:600;letter-spacing:.06em;font-size:.92rem;
+    box-shadow:0 6px 18px rgba(224,118,78,.35);
+  }
+  .free-badge small{font-weight:400;opacity:.92;letter-spacing:.12em;font-size:.7rem;text-transform:uppercase}
+
+  /* ---------- Details card ---------- */
+  .panel{
+    background:#fff;
+    margin:-44px auto 0;position:relative;z-index:5;
+    max-width:720px;border-radius:18px;
+    box-shadow:0 22px 60px rgba(18,58,72,.16);
+    padding:40px clamp(24px,5vw,48px) 44px;
+  }
+  .panel h2{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.7rem;color:var(--ink);margin-bottom:4px;
+  }
+  .panel .lead{color:var(--mist);margin-bottom:28px;font-size:1rem}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+  @media(max-width:520px){.facts{grid-template-columns:1fr}}
+  .fact .k{
+    font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--coral);font-weight:600;margin-bottom:3px;
+  }
+  .fact .v{font-size:1.08rem;font-weight:500;color:var(--ink)}
+  .fact .v small{display:block;font-weight:400;color:var(--ink-soft);font-size:.92rem;margin-top:2px}
+
+  .divider{height:1px;background:var(--line);margin:30px 0}
+
+  .register-panel{margin-top:28px}
+  .eb-widget{margin-top:18px;min-height:625px;border-radius:12px;overflow:hidden}
+  .eb-widget iframe{border-radius:12px}
+
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--ink);color:#fff;text-decoration:none;
+    padding:13px 24px;border-radius:11px;font-weight:500;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(18,58,72,.25)}
+  .btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn.alt:hover{border-color:var(--ink);box-shadow:none}
+
+  /* ---------- Footer ---------- */
+  footer{
+    text-align:center;padding:46px 24px 60px;color:var(--ink-soft);
+  }
+  .org{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px}
+  .org .mark{width:42px;height:42px}
+  .org .name{font-weight:600;letter-spacing:.04em;color:var(--ink)}
+  .contact{font-size:1.05rem;margin-bottom:6px}
+  .contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+  .seva{font-size:.9rem;color:var(--mist)}
+
+  @media(prefers-reduced-motion:no-preference){
+    .lotus,.title,.subtitle,.free-badge{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+    .title{animation-delay:.08s}.subtitle{animation-delay:.16s}.free-badge{animation-delay:.24s}
+    @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero" id="top">
+    <!-- reeds, left and right -->
+    <span class="reed" style="left:6%;height:120px;transform:rotate(-4deg)"></span>
+    <span class="reed" style="left:8%;height:90px;transform:rotate(3deg)"></span>
+    <span class="reed" style="right:7%;height:130px;transform:rotate(4deg)"></span>
+    <span class="reed" style="right:9.5%;height:96px;transform:rotate(-3deg)"></span>
+
+    <div class="lotus" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none">
+        <g stroke="#cfe6e0" stroke-width="1.4" fill="rgba(255,255,255,.14)">
+          <path d="M50 88 C30 78 18 58 22 40 C34 50 44 64 50 88Z"/>
+          <path d="M50 88 C70 78 82 58 78 40 C66 50 56 64 50 88Z"/>
+          <path d="M50 86 C36 70 30 50 36 32 C46 44 50 64 50 86Z"/>
+          <path d="M50 86 C64 70 70 50 64 32 C54 44 50 64 50 86Z"/>
+          <path d="M50 84 C44 64 46 42 50 26 C54 42 56 64 50 84Z"/>
+        </g>
+        <circle cx="50" cy="60" r="9" fill="rgba(255,240,180,.85)"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Science of Spirituality · Houston</p>
+    <h1 class="title">Living from<br>Our Soul</h1>
+    <p class="subtitle">A 12-part journey to peace, clarity &amp; happiness through meditation.</p>
+    <span class="free-badge">FREE <small>All are welcome</small></span>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" aria-label="Workshop details">
+      <h2>Free meditation workshop</h2>
+      <p class="lead">A welcoming series for newcomers and longtime practitioners alike. Come as you are.</p>
+
+      <div class="facts">
+        <div class="fact">
+          <div class="k">Begins</div>
+          <div class="v">Saturday, July 11, 2026</div>
+        </div>
+        <div class="fact">
+          <div class="k">When</div>
+          <div class="v">Every other Saturday<small>1:30 PM · lunch at 12:30 PM</small></div>
+        </div>
+        <div class="fact">
+          <div class="k">Where</div>
+          <div class="v">Carmel Temple<small>1209 Pennsylvania St, South Houston, TX 77587</small></div>
+        </div>
+        <div class="fact">
+          <div class="k">Cost</div>
+          <div class="v">Free of charge<small>Offered in the spirit of giving</small></div>
+        </div>
+        <div class="fact">
+          <div class="k">Lunch</div>
+          <div class="v">Free full vegetarian meal<small>served at 12:30pm</small></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="cta-row">
+        <a class="btn" href="#register">Register free</a>
+        <a class="btn alt" href="https://maps.google.com/?q=1209+Pennsylvania+St,+South+Houston,+TX+77587" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn alt" href="tel:+12817664767">Call or text 281.766.4767</a>
+      </div>
+    </section>
+
+    <section class="panel register-panel" id="register" aria-label="Register">
+      <h2>Reserve your place</h2>
+      <p class="lead">Registration is free. Reserve a spot so we can prepare lunch and seating for everyone.</p>
+      <div id="eventbrite-widget-container-1992723076364" class="eb-widget"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="org">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="30" r="13" fill="#5b8fc7"/>
+        <path d="M50 44 C42 44 36 52 36 64 C44 64 50 58 50 44Z" fill="#6f9fd0"/>
+        <path d="M50 44 C58 44 64 52 64 64 C56 64 50 58 50 44Z" fill="#6f9fd0"/>
+        <path d="M50 78 C30 78 14 68 6 60 C24 56 40 62 50 78Z" fill="#7aa9d6"/>
+        <path d="M50 78 C70 78 86 68 94 60 C76 56 60 62 50 78Z" fill="#7aa9d6"/>
+      </svg>
+      <span class="name">Science of Spirituality · Houston</span>
+    </div>
+    <p class="contact">Questions? <a href="tel:+12817664767">281.766.4767</a></p>
+    <p class="seva">soshouston.org · Offered freely in the spirit of giving</p>
+  </footer>
+
+  <!-- Eventbrite checkout widget -->
+  <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      if (window.EBWidgets && window.EBWidgets.createWidget) {
+        window.EBWidgets.createWidget({
+          widgetType: 'checkout',
+          eventId: '1992723076364',
+          iframeContainerId: 'eventbrite-widget-container-1992723076364',
+          iframeContainerHeight: 625,
+          themeSettings: {
+            brandColor: '#d8a13a'
+          },
+          onOrderComplete: function () {
+            console.log('Registration complete');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
