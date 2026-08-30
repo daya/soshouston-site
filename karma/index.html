@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Why Do Good People Suffer? — Living from Our Soul · Science of Spirituality Houston</title>
+    <meta name="description" content="A free meditation workshop on karma, destiny, and free will. Saturday, September 19 at Carmel Temple Annex, South Houston. Free vegetarian lunch. No experience needed.">
+    <meta property="og:title" content="Why Do Good People Suffer? — Karma, Destiny & Free Will">
+    <meta property="og:description" content="A free meditation workshop · Sat, Sept 19 · Carmel Temple Annex, South Houston · Free vegetarian lunch · Everyone welcome.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --violet:#2D1B69;         /* deep royal violet */
+            --violet-ink:#241556;
+            --gold:#b8912f;           /* muted gold */
+            --gold-bright:#d8a13a;
+            --cream:#f5f1e9;          /* warm cream */
+            --cream-soft:#faf7f0;
+            --ink:#1c1630;
+            --muted:#6a6382;
+            --line:rgba(45,27,105,.16);
+        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{
+            font-family:"Outfit",system-ui,sans-serif;
+            color:var(--ink);background:var(--cream);
+            line-height:1.6;-webkit-font-smoothing:antialiased;
+        }
+        .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+
+        /* top ribbon */
+        .ribbon{
+            background:var(--violet);color:#fff;text-align:center;
+            padding:15px 20px;font-weight:600;letter-spacing:.28em;
+            font-size:.82rem;text-transform:uppercase;
+        }
+
+        /* hero with faint mandala */
+        .hero{
+            position:relative;overflow:hidden;text-align:center;
+            padding:52px 24px 60px;
+            background:
+                    radial-gradient(120% 90% at 50% 30%, var(--cream-soft) 0%, var(--cream) 60%);
+        }
+        .mandala{
+            position:absolute;inset:0;margin:auto;
+            width:min(680px,120%);height:min(680px,120%);
+            opacity:.5;pointer-events:none;
+            display:flex;align-items:center;justify-content:center;
+        }
+        .mandala svg{width:100%;height:100%}
+        .hero-inner{position:relative;z-index:2}
+
+        .kicker{
+            color:var(--gold);font-weight:600;
+            letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;
+            margin-bottom:14px;
+        }
+        .kicker .rule{display:block;width:64px;height:2px;background:var(--gold);margin:14px auto 0}
+
+        .headline{
+            font-family:"Playfair Display",serif;font-weight:700;
+            color:var(--violet);
+            font-size:clamp(2.7rem,8vw,4.4rem);line-height:1.02;
+            letter-spacing:-.5px;
+        }
+        .headline .rule{display:block;width:150px;height:2px;background:var(--gold);margin:22px auto}
+
+        .themes{
+            font-family:"Playfair Display",serif;font-style:italic;
+            color:var(--gold);font-size:clamp(1.2rem,3.6vw,1.6rem);
+            line-height:1.35;font-weight:500;
+        }
+
+        /* violet callout bar */
+        .callout{
+            background:var(--violet);color:#fff;border-radius:12px;
+            max-width:640px;margin:34px auto 0;padding:20px 24px;text-align:center;
+            box-shadow:0 14px 34px rgba(45,27,105,.28);
+        }
+        .callout .big{font-weight:600;letter-spacing:.06em;font-size:1.15rem;text-transform:uppercase}
+        .callout .small{font-family:"Playfair Display",serif;font-style:italic;font-size:1.05rem;opacity:.92;margin-top:3px}
+
+        /* details */
+        .details{text-align:center;padding:14px 24px 8px}
+        .date{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.5rem,4.5vw,2rem);color:var(--ink);margin-bottom:4px}
+        .time{color:var(--muted);font-size:1.05rem;margin-bottom:24px}
+        .venue{font-family:"Playfair Display",serif;font-weight:700;color:var(--violet);font-size:1.3rem}
+        .addr{color:var(--ink);font-size:1rem;margin-top:2px}
+        .addr a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+        .addr a:hover{text-decoration-color:var(--gold)}
+        .park{color:var(--muted);font-size:.95rem;margin-top:2px}
+        .mini-rule{width:64px;height:2px;background:var(--gold);margin:22px auto}
+        .welcome{font-family:"Playfair Display",serif;font-style:italic;color:var(--ink);font-size:1.15rem}
+        .short{display:block;margin-top:8px;color:var(--gold);font-weight:600;font-family:"Outfit",sans-serif;font-style:normal;font-size:1.1rem;letter-spacing:.02em}
+        .org{color:var(--muted);font-size:.92rem;margin-top:6px}
+
+        /* register */
+        .register{
+            background:#fff;max-width:680px;margin:36px auto 0;border-radius:16px;
+            box-shadow:0 20px 54px rgba(45,27,105,.16);
+            padding:38px clamp(22px,5vw,44px) 42px;text-align:left;
+        }
+        .register h2{font-family:"Playfair Display",serif;font-weight:600;color:var(--violet);font-size:1.6rem}
+        .register .lead{color:var(--muted);margin:6px 0 20px}
+        .eb-widget{min-height:625px;border-radius:12px;overflow:hidden}
+        .eb-note{background:#fdf6e6;border:1px solid rgba(184,145,47,.35);border-radius:10px;padding:12px 16px;color:#7a5c15;font-size:.92rem;margin-bottom:16px}
+        .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+        .btn{display:inline-flex;align-items:center;gap:8px;background:var(--violet);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:500;transition:transform .15s,box-shadow .15s}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(45,27,105,.28)}
+        .btn.alt{background:transparent;color:var(--violet);border:1.5px solid var(--line)}
+        .btn.alt:hover{border-color:var(--violet);box-shadow:none}
+
+        footer{text-align:center;padding:42px 24px 60px;color:var(--muted)}
+        footer .name{color:var(--violet);font-weight:600}
+        footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold-bright)}
+
+        @media(prefers-reduced-motion:no-preference){
+            .kicker,.headline,.themes,.callout{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+            .headline{animation-delay:.06s}.themes{animation-delay:.14s}.callout{animation-delay:.2s}
+            @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+        }
+    </style>
+</head>
+<body>
+
+<div class="ribbon">Living from Our Soul</div>
+
+<header class="hero">
+    <div class="mandala" aria-hidden="true">
+        <svg viewBox="0 0 600 600" fill="none" stroke="rgba(184,145,47,.4)" stroke-width="1">
+            <circle cx="300" cy="300" r="290"/>
+            <circle cx="300" cy="300" r="230"/>
+            <circle cx="300" cy="300" r="150"/>
+            <circle cx="300" cy="300" r="70"/>
+            <g>
+                <line x1="300" y1="10" x2="300" y2="590"/>
+                <line x1="10" y1="300" x2="590" y2="300"/>
+                <line x1="95" y1="95" x2="505" y2="505"/>
+                <line x1="505" y1="95" x2="95" y2="505"/>
+                <line x1="300" y1="10" x2="505" y2="150"/><line x1="300" y1="10" x2="95" y2="150"/>
+                <line x1="300" y1="590" x2="505" y2="450"/><line x1="300" y1="590" x2="95" y2="450"/>
+            </g>
+            <g fill="rgba(184,145,47,.5)" stroke="none">
+                <circle cx="300" cy="70" r="4"/><circle cx="300" cy="530" r="4"/>
+                <circle cx="70" cy="300" r="4"/><circle cx="530" cy="300" r="4"/>
+                <circle cx="170" cy="170" r="4"/><circle cx="430" cy="430" r="4"/>
+                <circle cx="430" cy="170" r="4"/><circle cx="170" cy="430" r="4"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="hero-inner">
+        <p class="kicker">Session 6 of 12 · A Free 12-Part Series<span class="rule"></span></p>
+        <h1 class="headline">Why Do<br>Good People<br>Suffer?<span class="rule"></span></h1>
+        <p class="themes">Karma · Destiny · Free Will<br>The Wheel of Life</p>
+
+        <div class="callout">
+            <div class="big">Free Meditation Workshop</div>
+            <div class="small">&amp; free vegetarian lunch</div>
+        </div>
+    </div>
+</header>
+
+<section class="details">
+    <div class="date">Saturday, September 19</div>
+    <div class="time">Lunch 12:30 PM · Workshop 1:30 – 3:00 PM</div>
+    <div class="venue">Carmel Temple Annex</div>
+    <div class="addr"><a href="https://maps.app.goo.gl/Gr7aAiKPp3KKb8z66" target="_blank" rel="noopener">1209 Pennsylvania St, South Houston, TX 77587</a></div>
+    <div class="park">Free parking on site</div>
+    <div class="mini-rule"></div>
+    <p class="welcome">No experience needed · Everyone welcome
+    </p>
+    <p class="org">Science of Spirituality — Houston</p>
+</section>
+
+<main class="wrap">
+    <section class="register" id="register" aria-label="Register">
+        <h2>Reserve your place</h2>
+        <p class="lead">Registration is free. Reserve a spot so we can prepare lunch and seating.</p>
+
+        <!-- ⚠️ REPLACE the eventId below with the Sept 19 OCCURRENCE ID (see note). -->
+        <div id="eventbrite-widget-container-1992723076364" class="eb-widget"></div>
+
+        <div class="cta-row">
+            <a class="btn" href="https://maps.app.goo.gl/Gr7aAiKPp3KKb8z66" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn alt" href="tel:+12817664767">Call or text 281.766.4767</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p><span class="name">Science of Spirituality · Houston</span></p>
+    <p style="margin-top:6px">Questions? <a href="tel:+12817664767">281.766.4767</a></p>
+    <p style="margin-top:4px">soshouston.org · Offered freely in the spirit of giving</p>
+</footer>
+
+<!-- Eventbrite checkout widget -->
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+  // ⚠️ Sept 19 only:
+  // Event 1992723076364 is the LFOS series (recurring). To show ONLY the
+  // Sept 19 session, replace SEPT19_OCCURRENCE_ID below with that date's
+  // occurrence ID from Eventbrite, and update the container id above to match.
+  // How to find it: open the event on Eventbrite, switch to the Sept 19 date,
+  // and copy the number at the end of the URL (…-tickets-<NUMBER>).
+  var KARMA_EVENT_ID = '1992723076364'; // <-- change to SEPT19 occurrence id
+  window.addEventListener('load', function () {
+    if (window.EBWidgets && window.EBWidgets.createWidget) {
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: KARMA_EVENT_ID,
+        iframeContainerId: 'eventbrite-widget-container-1992723076364',
+        iframeContainerHeight: 625,
+        themeSettings: { brandColor: '#2D1B69' },
+        onOrderComplete: function () { console.log('Registration complete'); }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
