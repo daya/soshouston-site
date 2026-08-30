@@ -21,6 +21,8 @@
     --coral:#e0764e;
     --cream:#f4faf8;
     --line:rgba(18,58,72,.14);
+    --poster-ratio:1.8335;   /* 2048 / 1117 */
+    --poster-max-h:66vh;     /* poster tops out at ~2/3 of the viewport */
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -37,40 +39,42 @@
   .hero{
     position:relative;
     width:100%;
-    /* padding-top technique keeps the poster's 2048×1117 ratio (1117/2048 = 54.54%) in every browser */
-    height:0;
-    padding-top:54.54%;
+    /* The poster carries text at its top and bottom edges, so it must never be
+       cropped: hold its 2048×1117 ratio and cap the width, which caps the
+       height at --poster-max-h and leaves the rest of the screen for the card. */
+    aspect-ratio:var(--poster-ratio);
+    max-width:calc(var(--poster-max-h) * var(--poster-ratio));
+    margin:0 auto;
     background:#bcd3d3 url("/assets/lfos-hero-bg.jpg") center center / cover no-repeat;
   }
-  /* On narrow screens, letterbox the wide poster so all its text stays visible */
-  @media(max-width:720px){
-    .hero{
-      height:auto;
-      padding-top:0;
-      min-height:64vh;
-      background-size:contain;
-      background-color:#123a48;
-    }
+  /* Fallback for browsers without aspect-ratio (pre-2021): full-bleed, as before */
+  @supports not (aspect-ratio:1/1){
+    .hero{max-width:none;height:0;padding-top:54.54%}
   }
-  /* Scroll cue + FREE badge float over the poster's lower area */
+  /* Narrow screens use the same ratio box - no mobile override needed. The old
+     one (contain + 64vh min-height) added ~330px of empty letterbox bars
+     without enlarging the poster, since the fit was width-limited either way. */
+
+  /* FREE badge straddles the poster/card seam, clear of the poster's own text */
   .hero-badge{
     position:absolute;
-    left:50%;bottom:5%;
-    transform:translateX(-50%);
+    left:50%;bottom:0;
+    transform:translate(-50%,50%);
+    z-index:6;
     display:inline-flex;align-items:center;gap:10px;
     background:var(--coral);color:#fff;
     padding:10px 24px;border-radius:999px;
-    font-weight:600;letter-spacing:.06em;font-size:1rem;
+    font-weight:600;letter-spacing:.06em;font-size:1rem;white-space:nowrap;
     box-shadow:0 6px 20px rgba(224,118,78,.4);
     text-decoration:none;
   }
   .hero-badge small{font-weight:400;opacity:.92;letter-spacing:.12em;font-size:.72rem;text-transform:uppercase}
-  @media(max-width:720px){.hero-badge{bottom:3%;font-size:.9rem;padding:9px 20px}}
+  @media(max-width:720px){.hero-badge{font-size:.9rem;padding:9px 20px}}
 
   /* ---------- Details card ---------- */
   .panel{
     background:#fff;
-    margin:-44px auto 0;position:relative;z-index:5;
+    margin:-26px auto 0;position:relative;z-index:5;
     max-width:720px;border-radius:18px;
     box-shadow:0 22px 60px rgba(18,58,72,.16);
     padding:40px clamp(24px,5vw,48px) 44px;
