@@ -8,7 +8,17 @@
 <meta property="og:title" content="Living from Our Soul — A 12-Part Meditation Journey">
 <meta property="og:description" content="Free meditation workshop & lunch. Weekly on Saturdays · Carmel Temple (Annex), South Houston. Join any week — all are welcome.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="/assets/lfos-hero-bg.jpg">
+<meta property="og:url" content="https://soshouston.org/living-from-our-soul/">
+<meta property="og:site_name" content="Science of Spirituality — Houston">
+<meta property="og:image" content="https://soshouston.org/assets/lfos-hero-bg.jpg">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1117">
+<meta property="og:image:alt" content="Living from Our Soul — poster for the meditation workshop series at Carmel Temple Annex, South Houston">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Living from Our Soul — A 12-Part Meditation Journey">
+<meta name="twitter:description" content="Meditation workshop &amp; lunch. Weekly on Saturdays · Carmel Temple (Annex), South Houston. Join any week — all are welcome.">
+<meta name="twitter:image" content="https://soshouston.org/assets/lfos-hero-bg.jpg">
+<link rel="canonical" href="https://soshouston.org/living-from-our-soul/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -55,7 +65,7 @@
      one (contain + 64vh min-height) added ~330px of empty letterbox bars
      without enlarging the poster, since the fit was width-limited either way. */
 
-  /* FREE badge straddles the poster/card seam, clear of the poster's own text */
+  /* Badge straddles the poster/card seam, clear of the poster's own text */
   .hero-badge{
     position:absolute;
     left:50%;bottom:0;
@@ -79,6 +89,9 @@
     box-shadow:0 22px 60px rgba(18,58,72,.16);
     padding:40px clamp(24px,5vw,48px) 44px;
   }
+  /* The first card sits under the hero badge - extra top padding keeps the
+     heading clear of it */
+  .wrap > .panel:first-child{padding-top:72px}
   .panel h2{
     font-family:"Cormorant Garamond",serif;font-weight:600;
     font-size:1.7rem;line-height:1.25;color:var(--ink);margin-bottom:8px;
@@ -140,6 +153,10 @@
   .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(18,58,72,.25)}
   .btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
   .btn.alt:hover{border-color:var(--ink);box-shadow:none}
+  /* WhatsApp: outline button on-palette, brand green kept to the glyph */
+  .btn.wa{background:transparent;color:var(--ink);border:1.5px solid rgba(37,211,102,.55)}
+  .btn.wa:hover{border-color:#25D366;box-shadow:0 10px 24px rgba(37,211,102,.22)}
+  .btn.wa svg{width:19px;height:19px;fill:#25D366;flex:none}
 
   /* ---------- Footer ---------- */
   footer{
@@ -151,6 +168,22 @@
   .contact{font-size:1.05rem;margin-bottom:6px}
   .contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
   .seva{font-size:.9rem;color:var(--mist)}
+  /* ---------- Share row ---------- */
+  .share{margin:26px auto 18px;max-width:520px}
+  .share-label{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-bottom:12px}
+  .share-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+  .sh{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:42px;height:42px;border-radius:50%;
+    border:1.5px solid var(--line);background:transparent;color:var(--ink-soft);
+    cursor:pointer;padding:0;
+    transition:transform .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .sh:hover{transform:translateY(-2px);border-color:var(--coral);color:var(--coral)}
+  .sh svg{width:19px;height:19px;fill:currentColor}
+  .sh.line svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .share-toast{font-size:.85rem;color:var(--coral);opacity:0;transition:opacity .2s ease}
+  .share-toast.on{opacity:1}
 </style>
 </head>
 <body>
@@ -158,12 +191,12 @@
   <!-- Hero: the poster image itself -->
   <header class="hero" id="top" role="img"
           aria-label="Living from Our Soul — A 12-week journey to peace, clarity and happiness through meditation. Free weekly meditation workshop and lunch. Saturdays, 1:30 to 3:30 PM, lunch at 12:30 PM. The series is underway; you can join any week.">
-    <a class="hero-badge" href="#register">FREE <small>All are welcome · Register</small></a>
+    <a class="hero-badge" href="#register">All are welcome <small>Register</small></a>
   </header>
 
   <main class="wrap">
     <section class="panel" aria-label="Workshop details">
-      <h2>Living from Our Soul — Free Meditation Workshop Series</h2>
+      <h2>Living from Our Soul — 12 Meditation Workshops</h2>
       <p class="lead">A welcoming series for newcomers and longtime practitioners alike. Each session stands on its own, so you can join any Saturday. Come as you are.</p>
 
       <a class="spotlight" href="/karma/">
@@ -188,7 +221,7 @@
         </div>
         <div class="fact">
           <div class="k">Cost</div>
-          <div class="v">Free of charge<small>Offered in the spirit of giving</small></div>
+          <div class="v">$0<small>Offered in the spirit of giving</small></div>
         </div>
         <div class="fact">
           <div class="k">Lunch</div>
@@ -202,6 +235,10 @@
         <a class="btn" href="#register">Register free</a>
         <a class="btn alt" href="https://maps.app.goo.gl/Gr7aAiKPp3KKb8z66" target="_blank" rel="noopener">Get directions</a>
         <a class="btn alt" href="tel:+12817664767">Call or text 281.766.4767</a>
+        <a class="btn wa" href="https://wa.me/message/7VFZA7J33T3MK1" target="_blank" rel="noopener"
+           aria-label="Ask a question on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.988 2.896 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.549 4.142 1.595 5.945L0 24l6.335-1.652a11.9 11.9 0 0 0 5.71 1.454h.005c6.581 0 11.94-5.359 11.943-11.945A11.87 11.87 0 0 0 20.52 3.45"/></svg>
+          Ask a question on WhatsApp</a>
       </div>
     </section>
 
@@ -218,7 +255,18 @@
       <span class="name">Science of Spirituality · Houston</span>
     </div>
     <p class="contact">Questions? <a href="tel:+12817664767">281.766.4767</a></p>
-    <p class="seva">soshouston.org · Offered freely in the spirit of giving</p>
+    <div class="share">
+      <p class="share-label">Know someone this would help? Pass it on</p>
+      <div class="share-row">
+        <a class="sh" href="https://wa.me/?text=Living%20from%20Our%20Soul%20%E2%80%94%20a%2012-part%20meditation%20workshop%20series%20in%20South%20Houston.%20Free%2C%20Saturdays%2C%20everyone%20welcome.%20https%3A%2F%2Fsoshouston.org%2Fliving-from-our-soul%2F" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.988 2.896 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.549 4.142 1.595 5.945L0 24l6.335-1.652a11.9 11.9 0 0 0 5.71 1.454h.005c6.581 0 11.94-5.359 11.943-11.945A11.87 11.87 0 0 0 20.52 3.45"/></svg></a>
+        <a class="sh" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoshouston.org%2Fliving-from-our-soul%2F" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a class="sh" href="https://twitter.com/intent/tweet?text=Living%20from%20Our%20Soul%20%E2%80%94%20a%2012-part%20meditation%20workshop%20series%20in%20South%20Houston.%20Free%2C%20Saturdays%2C%20everyone%20welcome.&amp;url=https%3A%2F%2Fsoshouston.org%2Fliving-from-our-soul%2F" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a class="sh line" href="mailto:?subject=Living%20from%20Our%20Soul%20%E2%80%94%20meditation%20workshops%20in%20South%20Houston&amp;body=Living%20from%20Our%20Soul%20%E2%80%94%20a%2012-part%20meditation%20workshop%20series%20in%20South%20Houston.%20Free%2C%20Saturdays%2C%20everyone%20welcome.%0A%0Ahttps%3A%2F%2Fsoshouston.org%2Fliving-from-our-soul%2F" aria-label="Share by email" title="Share by email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.4" y="4.6" width="19.2" height="14.8" rx="2.4"/><path d="m3.3 6.4 8.7 6.8 8.7-6.8"/></svg></a>
+        <button type="button" class="sh line" data-copy="https://soshouston.org/living-from-our-soul/" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.4 13.6a4.6 4.6 0 0 0 6.5 0l2.6-2.6a4.6 4.6 0 1 0-6.5-6.5l-1.3 1.3"/><path d="M13.6 10.4a4.6 4.6 0 0 0-6.5 0l-2.6 2.6a4.6 4.6 0 1 0 6.5 6.5l1.3-1.3"/></svg></button>
+        <span class="share-toast" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+    <p class="seva">soshouston.org · Offered in the spirit of love and service</p>
   </footer>
 
   <!-- Eventbrite checkout widget -->
@@ -238,6 +286,27 @@
       }
     });
   </script>
+
+<script>
+  // Copy-link button: falls back to a text selection prompt on older browsers
+  document.querySelectorAll('.sh[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = btn.getAttribute('data-copy');
+      var toast = btn.parentNode.querySelector('.share-toast');
+      var done = function () {
+        if (!toast) return;
+        toast.textContent = 'Link copied';
+        toast.classList.add('on');
+        setTimeout(function () { toast.classList.remove('on'); }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); });
+      } else {
+        window.prompt('Copy this link:', url);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
